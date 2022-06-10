@@ -39,10 +39,6 @@ pipeline {
                          issueQuery: 'resolution=Unresolved', 
                          projectKey: 'INSEC', 
                          projectName: 'insecure-bank'), 
-                    polaris(
-                        [$class: 'PolarisPipelineConfig',
-                        configName: 'github-sandbox',
-                        projectName: 'insecure-bank']), 
                     blackduck(
                         configName: 'bd-sandbox', 
                         projectName: 'insecure-bank-2', 
