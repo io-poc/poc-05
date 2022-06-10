@@ -30,8 +30,7 @@ pipeline {
                         projectName: 'insecure-bank',
                         workflowVersion: '2021.12.4'),
                     github(
-                        branch: 'master',
-                        configName: 'github-sandbox',
+                        configName: 'polaris-demo',
                         owner: 'io-poc',
                         repositoryName: 'poc-88'), 
                     jira(
@@ -40,6 +39,10 @@ pipeline {
                          issueQuery: 'resolution=Unresolved', 
                          projectKey: 'INSEC', 
                          projectName: 'insecure-bank'), 
+                    polaris(
+                        [$class: 'PolarisPipelineConfig',
+                        configName: 'github-sandbox',
+                        projectName: 'insecure-bank')], 
                     blackduck(
                         configName: 'bd-sandbox', 
                         projectName: 'insecure-bank-2', 
