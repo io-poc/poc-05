@@ -30,7 +30,8 @@ pipeline {
                         projectName: 'insecure-bank',
                         workflowVersion: '2021.12.4'),
                     github(
-                        configName: 'polaris-demo',
+                        branch: 'master',
+                        configName: 'github-sandbox',
                         owner: 'io-poc',
                         repositoryName: 'poc-88'), 
                     jira(
