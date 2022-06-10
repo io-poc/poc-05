@@ -42,7 +42,7 @@ pipeline {
                          projectName: 'insecure-bank'), 
                     blackduck(
                         configName: 'bd-sandbox', 
-                        projectName: 'insecure-bank', 
+                        projectName: 'insecure-bank-2', 
                         projectVersion: '1.0')                        
                     ]) {
                         sh 'io --stage io Persona.Type=devsecops Project.Release.Type=minor'
@@ -112,7 +112,7 @@ pipeline {
               echo 'Running SCA using BlackDuck'
               synopsysIO(connectors: [
                   blackduck(configName: 'bd-sandbox',
-                  projectName: 'insecure-bank',
+                  projectName: 'insecure-bank-2',
                   projectVersion: '1.0')]) {
                   sh 'io --stage execution --state io_state.json'
               }
