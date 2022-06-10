@@ -42,7 +42,7 @@ pipeline {
                     polaris(
                         [$class: 'PolarisPipelineConfig',
                         configName: 'github-sandbox',
-                        projectName: 'insecure-bank')], 
+                        projectName: 'insecure-bank']), 
                     blackduck(
                         configName: 'bd-sandbox', 
                         projectName: 'insecure-bank-2', 
