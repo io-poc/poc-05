@@ -63,7 +63,7 @@ pipeline {
         }
 
 
-        /*stage('SAST - Polaris') {
+        stage('SAST - Polaris') {
             when {
                 expression { isSASTEnabled }
             }
@@ -71,13 +71,12 @@ pipeline {
                 echo 'Running SAST using Polaris'
                 synopsysIO(connectors: [
                     [$class: 'PolarisPipelineConfig',
-                    configName: 'poc-polaris',
+                    configName: 'polaris-demo',
                     projectName: 'insecure-bank']]) {
                     sh 'io --stage execution --state io_state.json'
                 }
             }
         }
-        */
         
         stage('SAST- RapidScan') { environment {
             OSTYPE='linux-gnu' }
