@@ -26,12 +26,12 @@ pipeline {
             steps {
                 synopsysIO(connectors: [
                     io(
-                        configName: 'io-sandbox',
+                        configName: 'io-azure',
                         projectName: 'insecure-bank',
                         workflowVersion: '2022.4.1'),
                     github(
                         branch: 'master',
-                        configName: 'github-sandbox',
+                        configName: 'github-demo',
                         owner: 'io-poc',
                         repositoryName: 'poc-88'), 
                     jira(
@@ -41,8 +41,8 @@ pipeline {
                          projectKey: 'INSEC', 
                          projectName: 'insecure-bank'), 
                     blackduck(
-                        configName: 'bd-sandbox', 
-                        projectName: 'insecure-bank-2', 
+                        configName: 'BIZDevBD', 
+                        projectName: 'codedx_insecure', 
                         projectVersion: '1.0')                        
                     ]) {
                         sh 'io --stage io Persona.Type=developer Project.Release.Type=major'
@@ -71,7 +71,7 @@ pipeline {
                 echo 'Running SAST using Polaris'
                 synopsysIO(connectors: [
                     [$class: 'PolarisPipelineConfig',
-                    configName: 'polaris-demo',
+                    configName: 'csprod-polaris',
                     projectName: 'insecure-bank']]) {
                     sh 'io --stage execution --state io_state.json'
                 }
@@ -110,8 +110,8 @@ pipeline {
             steps {
               echo 'Running SCA using BlackDuck'
               synopsysIO(connectors: [
-                  blackduck(configName: 'bd-sandbox',
-                  projectName: 'insecure-bank-2',
+                  blackduck(configName: 'BIZDevBD',
+                  projectName: 'codedx_insecure',
                   projectVersion: '1.0')]) {
                   sh 'io --stage execution --state io_state.json'
               }
@@ -134,7 +134,7 @@ pipeline {
             steps {
                 echo 'Execute Workflow Stage'
                 synopsysIO(connectors: [
-                    codeDx(configName: 'codedx-demo', projectId: '1'),
+                    codeDx(configName: 'SIG-CodeDx', projectId: '20'),
                     jira(assignee: 'karn@synopsys.com', configName: 'jira-sandbox', issueQuery: 'resolution=Unresolved AND labels in (Security, Defect)', projectKey: 'INSEC'), 
                     //msteams(configName: 'poc-msteams'), 
                     //buildBreaker(configName: 'poc-bb')
