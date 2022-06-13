@@ -28,7 +28,7 @@ pipeline {
                     io(
                         configName: 'io-sandbox',
                         projectName: 'insecure-bank',
-                        workflowVersion: '2021.12.4'),
+                        workflowVersion: '2022.4.1'),
                     github(
                         branch: 'master',
                         configName: 'github-sandbox',
@@ -78,7 +78,7 @@ pipeline {
             }
         }
         
-        stage('SAST- RapidScan') { environment {
+      /*  stage('SAST- RapidScan') { environment {
             OSTYPE='linux-gnu' }
             when {
                expression { isSASTEnabled }
@@ -89,7 +89,7 @@ pipeline {
                 synopsysIO(connectors: [rapidScan(configName: 'sigma-sandbox')]) {
                 sh 'io --stage execution --state io_state.json' }
             }
-        }
+        } 
         
         stage('SAST Plus Manual') {
             when {
@@ -101,7 +101,7 @@ pipeline {
                 }
                 echo "Out-of-Band Activity - SAST Plus Manual triggered & approved"
             }
-        } 
+        } */
 
         stage('SCA - BlackDuck') {
             when {
@@ -118,7 +118,7 @@ pipeline {
             }
         } 
 
-        stage('DAST Plus Manual') {
+       /* stage('DAST Plus Manual') {
             when {
                 expression { isDASTPlusMEnabled }
             }
@@ -128,13 +128,13 @@ pipeline {
                 }
                 echo "Out-of-Band Activity - DAST Plus Manual triggered & approved"
             }
-        }
+        } */
 
         stage('IO - Workflow') {
             steps {
                 echo 'Execute Workflow Stage'
                 synopsysIO(connectors: [
-                    //codeDx(configName: 'poc-codedx', projectId: '1'),
+                    codeDx(configName: 'codedx-demo', projectId: '1'),
                     jira(assignee: 'karn@synopsys.com', configName: 'jira-sandbox', issueQuery: 'resolution=Unresolved AND labels in (Security, Defect)', projectKey: 'INSEC'), 
                     //msteams(configName: 'poc-msteams'), 
                     //buildBreaker(configName: 'poc-bb')
