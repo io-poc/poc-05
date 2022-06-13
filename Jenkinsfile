@@ -14,13 +14,13 @@ pipeline {
             }
         }
 
-        stage('Build Source Code') {
+     /*   stage('Build Source Code') {
             steps {
                   withMaven {
                       sh '''mvn clean package -Dmaven.test.skip'''
                   }
             }
-        }
+        } */
 
         stage('IO - Prescription') {
             steps {
