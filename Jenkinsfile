@@ -128,7 +128,7 @@ pipeline {
                 }
                 echo "Out-of-Band Activity - DAST Plus Manual triggered & approved"
             }
-        } */
+        } 
 
         stage('IO - Workflow') {
             steps {
@@ -180,7 +180,7 @@ pipeline {
                 }
                 echo "Security Sign-Off triggered & approved"
             }
-        } 
+        } */
     }
 
 }
