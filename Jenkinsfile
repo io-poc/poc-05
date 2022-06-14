@@ -39,11 +39,11 @@ pipeline {
                          configName: 'jira-sandbox', 
                          issueQuery: 'resolution=Unresolved', 
                          projectKey: 'INSEC', 
-                         projectName: 'insecure-bank'), 
-                    blackduck(
+                         projectName: 'insecure-bank') 
+                   /* blackduck(
                         configName: 'BIZDevBD', 
                         projectName: 'codedx_insecure', 
-                        projectVersion: '1.0')                        
+                        projectVersion: '1.0')        */                
                     ]) {
                         sh 'io --stage io Persona.Type=developer Project.Release.Type=major'
                     }
