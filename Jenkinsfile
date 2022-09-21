@@ -2,43 +2,43 @@ import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 
 // File Enviroment
-def fileProjectName = 'my-insecure-bank'
+def fileProjectName = 'insecure-bank'
 def fileBranchName = 'master'
 // IO Environment
-def ioPOCId = 'io-10-poc'
+def ioPOCId = 'io-05-poc'
 def ioProjectName = fileProjectName
-def ioWorkflowEngineVersion = '2022.4.1'
-def ioServerURL = "https://io10.codedx.synopsys.com"
+def ioWorkflowEngineVersion = '2022.7.1'
+def ioServerURL = "https://io05.codedx.synopsys.com"
 def ioRunAPI = "/api/ioiq/api/orchestration/runs/"
 
 // SCM - GitHub
-def gitHubPOCId = 'poc10-github'
-def gitHubOwner = 'OzViper'
+def gitHubPOCId = 'poc05-github'
+def gitHubOwner = 'io-poc'
 def scmBranch = fileBranchName
-def scmRepoName = 'insecure-bank'
+def scmRepoName = 'poc-05'
 def scmRevisionDate = ''
 
 // AST - Polaris
-def polarisConfigName = 'polaris-sipse'
+def polarisConfigName = 'polaris'
 def polarisProjectName = fileProjectName
 def polarisBranchName = fileBranchName
 
 // AST - Black Duck
-def blackDuckPOCId = 'blackduck-testing'
+def blackDuckPOCId = 'poc-05-bduck'
 def blackDuckProjectName = fileProjectName
 def blackDuckProjectVersion = fileBranchName
 
 // BTS Configuration
-def jiraAssignee = 'johnd'
-def jiraConfigName = 'jira-poc10'
+def jiraAssignee = 'admin'
+def jiraConfigName = 'poc05jira'
 def jiraIssueQuery = 'resolution=Unresolved'
-def jiraProjectKey = 'IRMOB'
-def jiraProjectName = 'IRMOB'
+def jiraProjectKey = 'DEV'
+def jiraProjectName = 'dev-test'
 
 // Code Dx Configuration
-def codeDxConfigName = 'poc10-codedx'
-def codeDxProjectId = '2'
-def codeDxInstnceURL = 'https://poc10.codedx.synopsys.com/codedx'
+def codeDxConfigName = 'poc05-codedx'
+def codeDxProjectId = '1'
+def codeDxInstnceURL = 'https://poc05.codedx.synopsys.com/codedx'
 def codeDxProjectAPI = '/api/projects/'
 def codeDxAnalysisEndpoint = '/analysis'
 def codeDxProjectContext = codeDxProjectId + ';branch=' + fileBranchName
