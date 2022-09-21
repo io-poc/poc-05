@@ -145,7 +145,7 @@ pipeline {
         }
 
         // SAST
-        stage('SAST') {
+       /* stage('SAST') {
             when {
                 expression { isSASTEnabled }
             }
@@ -159,7 +159,7 @@ pipeline {
                             sh 'io --stage execution --state io_state.json'
                 }
             }
-        }
+        } */
 
         // SCA
         stage('SCA') {
