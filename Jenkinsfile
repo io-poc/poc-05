@@ -19,7 +19,7 @@ def scmRepoName = 'poc-05'
 def scmRevisionDate = ''
 
 // AST - Polaris
-def polarisConfigName = 'polaris'
+def polarisConfigName = 'poc05-polaris'
 def polarisProjectName = fileProjectName
 def polarisBranchName = fileBranchName
 
