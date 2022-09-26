@@ -7,7 +7,7 @@ def fileBranchName = 'master'
 // IO Environment
 def ioPOCId = 'io-05-poc'
 def ioProjectName = fileProjectName
-def ioWorkflowEngineVersion = '2022.7.1'
+def ioWorkflowEngineVersion = '2022.7.0'
 def ioServerURL = "https://io05.codedx.synopsys.com"
 def ioRunAPI = "/api/ioiq/api/orchestration/runs/"
 
