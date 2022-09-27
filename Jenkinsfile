@@ -93,12 +93,12 @@ pipeline {
                         configName: gitHubPOCId,
                         owner: gitHubOwner,
                         repositoryName: scmRepoName),
-                    jira(
+                    /*jira(
                         assignee: jiraAssignee,
                         configName: jiraConfigName,
                         issueQuery: jiraIssueQuery,
                         projectKey: jiraProjectKey,
-                        projectName: jiraProjectName)
+                        projectName: jiraProjectName)*/
                     ]) {
                         sh 'io --stage io'
                     }
