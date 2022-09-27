@@ -32,7 +32,7 @@ def blackDuckProjectVersion = fileBranchName
 def jiraAssignee = 'admin'
 def jiraConfigName = 'poc05jira'
 def jiraIssueQuery = 'resolution=Unresolved'
-def jiraProjectKey = 'DEV'
+def jiraProjectKey = 'DEVSEC'
 def jiraProjectName = 'dev-test'
 
 // Code Dx Configuration
