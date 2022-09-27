@@ -4,7 +4,7 @@ install:
     version: latest
 project:
   name: "insecure-bank"
-  branch: "origin/master"
+  branch: "master"
   revision:
     name: "insecure-bank"
     date: "2020-10-01T14:25:30Z"
