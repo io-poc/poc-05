@@ -16,12 +16,12 @@ def gitHubPOCId = 'poc05-github'
 def gitHubOwner = 'io-poc'
 def scmBranch = fileBranchName
 def scmRepoName = 'poc-05'
-def scmRevisionDate = ''
+def scmRevisionDate = fileBranchName
 
 // AST - Polaris
 def polarisConfigName = 'poc05-polaris'
 def polarisProjectName = fileProjectName
-def polarisBranchName = 'origin/master'
+def polarisBranchName = 
 
 // AST - Black Duck
 def blackDuckPOCId = 'poc-05-bduck'
