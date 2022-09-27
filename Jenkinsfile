@@ -37,7 +37,7 @@ def jiraProjectName = 'dev-test'
 
 // Code Dx Configuration
 def codeDxConfigName = 'poc05-codedx'
-def codeDxProjectId = '1'
+def codeDxProjectId = '2'
 def codeDxInstnceURL = 'https://poc05.codedx.synopsys.com/codedx'
 def codeDxProjectAPI = '/api/projects/'
 def codeDxAnalysisEndpoint = '/analysis'
