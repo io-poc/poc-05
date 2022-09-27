@@ -21,7 +21,7 @@ def scmRevisionDate = fileBranchName
 // AST - Polaris
 def polarisConfigName = 'poc05-polaris'
 def polarisProjectName = fileProjectName
-def polarisBranchName = 
+def polarisBranchName = fileBranchName
 
 // AST - Black Duck
 def blackDuckPOCId = 'poc-05-bduck'
