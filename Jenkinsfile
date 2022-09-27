@@ -33,7 +33,7 @@ def jiraAssignee = 'admin'
 def jiraConfigName = 'poc05jira'
 def jiraIssueQuery = 'resolution=Unresolved'
 def jiraProjectKey = 'DEVSEC'
-def jiraProjectName = 'dev-test'
+def jiraProjectName = 'DEVSEC'
 
 // Code Dx Configuration
 def codeDxConfigName = 'poc05-codedx'
